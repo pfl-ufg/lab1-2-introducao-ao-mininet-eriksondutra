@@ -1,0 +1,45 @@
+Teste de desempenho de comunicação TCP com atraso de 5ms 
+e largura de banda 100Mbps:
+*** Iperf: testing TCP bandwidth between h1 and h2 
+*** Results: ['93.5 Mbits/sec', '110 Mbits/sec']
+
+Teste de desempenho de comunicação UDP com atraso de 5ms
+e largura de banda 100Mbps:
+*** Iperf: testing UDP bandwidth between h1 and h2 
+*** Results: ['10M', '10.0 Mbits/sec', '10.0 Mbits/sec']
+
+Teste de ping entre o host h1 para h2:
+h1 ping h2
+PING 10.0.0.2 (10.0.0.2) 56(84) bytes of data.
+64 bytes from 10.0.0.2: icmp_seq=1 ttl=64 time=22.1 ms
+64 bytes from 10.0.0.2: icmp_seq=2 ttl=64 time=24.7 ms
+64 bytes from 10.0.0.2: icmp_seq=3 ttl=64 time=21.4 ms
+64 bytes from 10.0.0.2: icmp_seq=4 ttl=64 time=21.2 ms
+64 bytes from 10.0.0.2: icmp_seq=5 ttl=64 time=20.8 ms
+64 bytes from 10.0.0.2: icmp_seq=6 ttl=64 time=22.6 ms
+64 bytes from 10.0.0.2: icmp_seq=7 ttl=64 time=21.4 ms
+64 bytes from 10.0.0.2: icmp_seq=8 ttl=64 time=21.1 ms
+64 bytes from 10.0.0.2: icmp_seq=9 ttl=64 time=20.8 ms
+64 bytes from 10.0.0.2: icmp_seq=10 ttl=64 time=21.1 ms
+^C
+--- 10.0.0.2 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9012ms
+rtt min/avg/max/mdev = 20.823/21.767/24.726/1.147 ms
+
+Teste de ping entre o host h2 para h1:
+h2 ping h1
+PING 10.0.0.1 (10.0.0.1) 56(84) bytes of data.
+64 bytes from 10.0.0.1: icmp_seq=1 ttl=64 time=22.8 ms
+64 bytes from 10.0.0.1: icmp_seq=2 ttl=64 time=23.0 ms
+64 bytes from 10.0.0.1: icmp_seq=3 ttl=64 time=21.6 ms
+64 bytes from 10.0.0.1: icmp_seq=4 ttl=64 time=21.0 ms
+64 bytes from 10.0.0.1: icmp_seq=5 ttl=64 time=20.7 ms
+64 bytes from 10.0.0.1: icmp_seq=6 ttl=64 time=20.9 ms
+64 bytes from 10.0.0.1: icmp_seq=7 ttl=64 time=21.1 ms
+64 bytes from 10.0.0.1: icmp_seq=8 ttl=64 time=21.0 ms
+64 bytes from 10.0.0.1: icmp_seq=9 ttl=64 time=21.0 ms
+64 bytes from 10.0.0.1: icmp_seq=10 ttl=64 time=21.2 ms
+^C
+--- 10.0.0.1 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9007ms
+rtt min/avg/max/mdev = 20.703/21.468/23.098/0.782 ms
